@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transformaciones</title>
+    <style>
+        .contenedor {
+            /*            w:1024+h:600+p:r+m:auto+bgc:#089*/
+            width: 1024px;
+            height: 600px;
+            position: relative;
+            margin: auto;
+            background-color: #39adbc;
+        }
+
+        .box {
+            /*            w:100+h:100+p:a+l:50*/
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50px;
+        }
+
+        .transformacion1 {
+            top: 10px;
+            background-color: #f80b30;
+            /*  transform: translateX() mueve el objeto en eje x  (despX)        */
+            /*  transform: translateY() mueve el objeto en eje y  (despY)       */
+            /*  transform: translate() mueve el objeto en ambos ejes (desplazamientoX, desplazamientoY)         */
+            -webkit-transform: translate(400px, 200px);
+            -moz-transform: translate(400px, 200px);
+            -ms-transform: translate(400px, 200px);
+            -o-transform: translate(400px, 200px);
+            transform: translate(400px, 200px);
+        }
+
+        .transformacion2 {
+            top: 120px;
+            background-color: #ac40cc;
+            /*  transform: rotateX() gira el objeto alrededor del eje X (gradosX)        */
+            /*  transform: translateY() gira el objeto alrededor del eje Y  (gradosY)       */
+            /*  transform: translateZ() gira el objeto alrededor del eje Z, el eje hacia nosotros, gira sobre la pantalla  (gradosZ)       */
+            -webkit-transform: rotateZ(270deg);
+            -moz-transform: rotateZ(270deg);
+            -ms-transform: rotateZ(270deg);
+            -o-transform: rotateZ(270deg);
+            transform: rotateZ(270deg);
+        }
+
+        .transformacion3 {
+            top: 230px;
+            background-color: #3c2781;
+            /*  transform: scaleX() escala el objeto en el eje X (factorEscalaX)        */
+            /*  transform: scaleY() escala el objeto en el eje Y  (factorEscalaY)       */
+            /*  transform: scale() se indica el valor (factorX, factorY) para escalar en ambos ejes de manera diferente  scale(0.5, 1.5)     */
+            /*  transform: scale() escala el objeto de manera proporcional en X y Y, el factor de escala es uniforme  scale(0.5)     */
+            -webkit-transform: scale(0.5, 1.5);
+            -moz-transform: scale(0.5, 1.5);
+            -ms-transform: scale(0.5, 1.5);
+            -o-transform: scale(0.5, 1.5);
+            transform: scale(0.5, 1.5);
+        }
+
+        .transformacion4 {
+            top: 340px;
+            background-color: #60be6b;
+            /*  transform: skewX() deformacion o sesgado del objeto en el ejeX (degX)     */
+            /*  transform: skewY() deformacion o sesgado del objeto en el ejeY (degY)     */
+            /*  transform: skew() deformacion o sesgado del objeto en ambos ejes (degX, degY)     */
+            -webkit-transform: skewX(-45deg);
+            -moz-transform: skewX(-45deg);
+            -ms-transform: skewX(-45deg);
+            -o-transform: skewX(-45deg);
+            transform: skewX(-45deg);
+        }
+
+        .transformacion5 {
+            top: 450px;
+            background-color: #b5b51d;
+            /*  transform: las transformaciones que quiera utilizar separadas por un espacio. ORDEN ES IMPORTANTE         */
+            /*  Se debe poner en el mismo orden en el que las aprendimos: translate rotate scale skew          */
+            -webkit-transform: translateX(300px) rotateY(60deg) scale(0.75) skewX(45deg);
+            -moz-transform: translateX(300px) rotateY(60deg) scale(0.75) skewX(45deg);
+            -ms-transform: translateX(300px) rotateY(60deg) scale(0.75) skewX(45deg);
+            -o-transform: translateX(300px) rotateY(60deg) scale(0.75) skewX(45deg);
+            transform: translateX(300px) rotateY(60deg) scale(0.75) skewX(45deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--   .contenedor>.box.transformacion$*5>h5{Transformación$}-->
+    <div class="contenedor">
+        <div class="box transformacion1">
+            <h5>Transformación1</h5>
+        </div>
+        <div class="box transformacion2">
+            <h5>Transformación2</h5>
+        </div>
+        <div class="box transformacion3">
+            <h5>Transformación3</h5>
+        </div>
+        <div class="box transformacion4">
+            <h5>Transformación4</h5>
+        </div>
+        <div class="box transformacion5">
+            <h5>Transformación5</h5>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation CSS3</title>
+</head>
+<style>
+    .contenedor {
+        /*            w:1024+h:600+p:r+m:auto+bgc:#089*/
+        width: 1024px;
+        height: 600px;
+        position: relative;
+        margin: auto;
+        background-color: #acebf4;
+    }
+
+    .box {
+        /*            w:100+h:100+p:a+l:50*/
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 50px;
+    }
+
+    .animation1 {
+        top: 10px;
+        background-color: #f75703;
+        animation-name: animacion1;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;  /* modo de terminar de la animacion */
+        animation-direction: alternate; /* invierte el sentido de la linea del tiempo */
+        animation-iteration-count: infinite; /* cantidad de ciclos (de la linea del tiempo) consumidos */
+    }
+
+    @keyframes animacion1 {
+
+        0% { transform:translateX(0px) scale(0.1); border-radius: 50%;}
+
+        100% { transform:translateX(400px); border-radius: 50%; background-color: #f82f0b;}
+
+    } /* Aqui cierra el keyframe */
+
+    .animation2 {
+        top: 120px;
+        background-color: #e0e014;
+        animation-name: animacionMultiple;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes animacionMultiple {
+        0% {transform: translate(0, 0);}
+        25% {transform: translate(400px, 0); border-radius: 50px;}
+        50% {transform: translate(400px, 400px);border-radius: 0px;}
+        75% {transform: translate(0, 400px);border-radius: 50px;}
+        100% {transform: translate(0, 0);}
+    }
+
+    .animation3 {
+        top: 230px;
+        background-color: #11bc2b;
+
+        /* SHORTHAND: name duration timing-function delay iteration-count direction */
+        animation: animacion3 4s ease-out 2s infinite alternate;
+    }
+
+    -webkit-@keyframes animacion3 {
+        0% {transform: translate(100px, 0); }
+        33.3% {transform: translate(200px, 200px);clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+        66.6% {transform: translate(0px, 200px);}
+        100% {transform: translate(100px, 0);}
+    }
+
+    -moz-@keyframes animacion3 {
+        0% {transform: translate(100px, 0); }
+        33.3% {transform: translate(200px, 200px);clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+        66.6% {transform: translate(0px, 200px);}
+        100% {transform: translate(100px, 0);}
+    }
+
+    -ms-@keyframes animacion3 {
+        0% {transform: translate(100px, 0); }
+        33.3% {transform: translate(200px, 200px);clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+        66.6% {transform: translate(0px, 200px);}
+        100% {transform: translate(100px, 0);}
+    }
+
+
+    @keyframes animacion3 {
+        0% {transform: translate(100px, 0); }
+        33.3% {transform: translate(200px, 200px);clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+        66.6% {transform: translate(0px, 200px);}
+        100% {transform: translate(100px, 0);}
+    }
+
+
+    .animation4 {
+        top: 340px;
+        background-color: #1672a3;
+    }
+
+    .animation5 {
+        top: 450px;
+        background-color: #631db5;
+    }
+
+</style>
+
+<body>
+
+    <!--   .contenedor>.box.animation$*5>h5{Animation$}-->
+    <div class="contenedor">
+        <div class="box animation1">
+            <h5>Animation1</h5>
+        </div>
+        <div class="box animation2">
+            <h5>Animation2</h5>
+        </div>
+        <div class="box animation3">
+            <h5>Animation3</h5>
+        </div>
+        <div class="box animation4">
+            <h5>Animation4</h5>
+        </div>
+        <div class="box animation5">
+            <h5>Animation5</h5>
+        </div>
+    </div>
+
+</body></html>

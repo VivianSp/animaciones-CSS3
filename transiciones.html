@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transiciones</title>
+    <style>
+        .contenedor {
+            /*            w:1024+h:600+p:r+m:auto+bgc:#089*/
+            width: 1024px;
+            height: 600px;
+            position: relative;
+            margin: auto;
+            background-color: #89d6e0;
+        }
+
+        .box {
+            /*            w:100+h:100+p:a+l:50*/
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50px;
+        }
+
+        /*        target*/
+        .transiciones1 {
+            top: 10px;
+            background-color: #f82f0b;
+            transition-property: transform;
+            transition-duration: 1s; //tiempo
+            transition-timing-function: ease-in-out; //curva de aceleracion
+        }
+
+        /*        Trigger*/
+        .transiciones1:hover {
+            transform: translateX(400px); //animacion
+        }
+
+        .transiciones2 {
+            top: 120px;
+            background-color: #e0e014;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .transiciones2:hover {
+            transform: translateX(400px) rotate(360deg) scale(1.5);
+            border-radius: 50%;
+            background-color: #ba259e;
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35); //ejeX ejeY difuminado color
+        }
+
+        .transiciones3 {
+            top: 230px;
+            background-color: #11bc2b;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(.8, .15, .22, .86);
+            transition-delay: 2s; //retardo de animacion
+        }
+
+        .transiciones3:hover {
+            transform: translateX(400px) scale(0.5);
+        }
+
+        .transiciones4 {
+            top: 340px;
+            background-color: #1672a3;
+            -webkit-transition: all 1s cubic-bezier(.8, .15, .22, .86) 2s;
+            -moz-transition: all 1s cubic-bezier(.8, .15, .22, .86) 2s;
+            -ms-transition: all 1s cubic-bezier(.8, .15, .22, .86) 2s;
+            -o-transition: all 1s cubic-bezier(.8, .15, .22, .86) 2s;
+            transition: all 1s cubic-bezier(.8, .15, .22, .86) 2s; //SHORTHAND propiedad tiempo aceleracion y retraso
+        }
+
+        .transiciones4:hover {
+            transform: translateX(400px) scale(0.5);
+        }
+
+        .transiciones5 {
+            top: 450px;
+            background-color: #631db5;
+            -webkit-transition: all 0.5s ease-in-out 1s;
+            -moz-transition: all 0.5s ease-in-out 1s;
+            -ms-transition: all 0.5s ease-in-out 1s;
+            -o-transition: all 0.5s ease-in-out 1s;
+            transition: all 0.5s ease-in-out 1s;
+        }
+
+        .transiciones5:hover {
+            transform: translateX(400px) rotate(360deg);
+            border-radius: 20%;
+            background-color: #6a4d98;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!--    .contenedor>.box.transiciones$*5>h5{Transiciones$}-->
+    <div class="contenedor">
+        <div class="box transiciones1">
+            <h5>Transiciones1</h5>
+        </div>
+        <div class="box transiciones2">
+            <h5>Transiciones2</h5>
+        </div>
+        <div class="box transiciones3">
+            <h5>Transiciones3</h5>
+        </div>
+        <div class="box transiciones4">
+            <h5>Transiciones4</h5>
+        </div>
+        <div class="box transiciones5">
+            <h5>Transiciones5</h5>
+        </div>
+    </div>
+</body></html>
